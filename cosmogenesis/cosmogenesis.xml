@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<screensaver name="cosmogenesis" _label="Cosmogenesis" gl="yes">
+
+  <command arg="--root"/>
+
+  <hgroup>
+   <vgroup>
+    <number id="speed" type="slider" arg="--speed %"
+            _label="Speed" _low-label="Slow" _high-label="Fast"
+            low="0.25" high="3.0" default="1.0"/>
+
+    <select id="start">
+      <option id="s0" _label="Start with the Big Bang"/>
+      <option id="s1" _label="Start with the spiral galaxy"      arg-set="--scene 1"/>
+      <option id="s2" _label="Start with the galaxy collision"   arg-set="--scene 2"/>
+      <option id="s3" _label="Start with the black hole"         arg-set="--scene 3"/>
+      <option id="s4" _label="Start with the stellar nursery"    arg-set="--scene 4"/>
+      <option id="s5" _label="Start with the planetary system"   arg-set="--scene 5"/>
+      <option id="s6" _label="Start with the supernova"          arg-set="--scene 6"/>
+      <option id="sr" _label="Start with a random scene"         arg-set="--scene -1"/>
+    </select>
+
+    <boolean id="shuffle" _label="Shuffle the scene order" arg-set="--shuffle"/>
+   </vgroup>
+
+   <vgroup>
+    <boolean id="bigbang"   _label="The Big Bang"         arg-unset="--no-bigbang"/>
+    <boolean id="galaxy"    _label="A spiral galaxy forms" arg-unset="--no-galaxy"/>
+    <boolean id="collision" _label="Galaxies collide"     arg-unset="--no-collision"/>
+    <boolean id="blackhole" _label="The black hole"       arg-unset="--no-blackhole"/>
+    <boolean id="nursery"   _label="Stellar nursery"      arg-unset="--no-nursery"/>
+    <boolean id="planets"   _label="Planets form"         arg-unset="--no-planets"/>
+    <boolean id="supernova" _label="Supernova"            arg-unset="--no-supernova"/>
+   </vgroup>
+  </hgroup>
+
+  <_description>
+A journey through cosmic history: the Big Bang and the cosmic web, the
+birth of a spiral galaxy, a galaxy collision, a supermassive black hole
+tearing a star apart, a stellar nursery, a planetary system forming from
+its disk, and a supernova that leaves a pulsar behind.
+
+Untick scenes to leave them out of the show.
+  </_description>
+</screensaver>

@@ -1,0 +1,7 @@
+# build outputs
+cosmogenesis/cosmogenesis
+nebulae/nebulae
+
+# local backups
+*.bak*
+*-fixedfunc.c

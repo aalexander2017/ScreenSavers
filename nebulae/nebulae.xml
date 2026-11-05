@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<screensaver name="nebulae" _label="Nebulae" gl="yes">
+
+  <command arg="--root"/>
+
+  <number id="speed" type="slider" arg="--speed %"
+          _label="Flight speed" _low-label="Drift" _high-label="Brisk"
+          low="0.25" high="2.0" default="1.0"/>
+
+  <boolean id="continuous" _label="Continuous stellar nursery (one endless flight)" arg-set="--continuous"/>
+
+  <number id="duration" type="slider" arg="--duration %"
+          _label="Time per nebula" _low-label="1 min" _high-label="10 min"
+          low="60" high="600" default="130"/>
+
+  <select id="quality">
+    <option id="qauto"   _label="Detail: automatic (adapts to your GPU)"/>
+    <option id="qlow"    _label="Detail: low"    arg-set="--quality low"/>
+    <option id="qmedium" _label="Detail: medium" arg-set="--quality medium"/>
+    <option id="qhigh"   _label="Detail: high"   arg-set="--quality high"/>
+    <option id="qultra"  _label="Detail: ultra"  arg-set="--quality ultra"/>
+  </select>
+
+  <select id="palette">
+    <option id="pmixed"   _label="Colours: mixed"/>
+    <option id="pnatural" _label="Colours: natural (hydrogen red, oxygen teal)" arg-set="--palette natural"/>
+    <option id="phubble"  _label="Colours: Hubble palette (gold and blue)"     arg-set="--palette hubble"/>
+  </select>
+
+  <_description>
+Slow fly-throughs of volumetric nebulae and stellar nurseries.
+
+Each nebula is generated fresh: a star cluster carving a cavity with dust
+pillars, a wind-blown bubble, or a dark dust cloud lit blue by nearby
+stars. The camera tours the most interesting places, and as it arrives a
+protostar ignites in a dense core, lights up the gas around it and
+launches jets.
+
+In continuous mode the flight never ends: the camera keeps touring,
+new stars keep igniting all around, and when it is time for a new
+nebula the old one dissolves and the next condenses around the camera
+without a break. (Unless you move the slider, each nebula then lasts
+about six minutes.)
+  </_description>
+</screensaver>
